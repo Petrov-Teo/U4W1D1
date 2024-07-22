@@ -6,29 +6,39 @@ public class Es1 {
         int result = moltiplica(15, 5);
         System.out.println(result);
 
-        String contatenedResultByString = concatena("Welcome to", "Java");
-        System.out.println(contatenedResultByString);
+        String concatenatedResultByString = concatena("Welcome to", "Java");
+        System.out.println(concatenatedResultByString);
 
-        String[] resultArray = arraydistringhe("Ciao");
-        System.out.println(Arrays.toString(resultArray));
-
+        String[] resultArray = {"uno", "due", "tre", "quattro", "cinque"};
+        String[] newArray = inserisciInArray("nuovo", resultArray);
+        System.out.println(Arrays.toString(newArray));
     }
 
-
     public static int moltiplica(int num1, int num2) {
-        return (num1 * num2);
+        return num1 * num2;
     }
 
     public static String concatena(String text1, String text2) {
         return text1 + " " + text2;
     }
 
-    public static String[] arraydistringhe(String text1) {
+    public static String[] inserisciInArray(String text, String[] array) {
+        // Creare un nuovo array con una dimensione maggiore di 1
+        String[] newArray = new String[array.length + 1];
 
-        String[] arraydistrighe = new String[5];
+        // Copiare gli elementi prima della posizione desiderata
+        for (int i = 0; i < 2; i++) {
+            newArray[i] = array[i];
+        }
 
-        arraydistrighe[3] = text1;
+        // Inserire il nuovo elemento nella posizione 3 (indice 2)
+        newArray[2] = text;
 
-        return arraydistrighe;
+        // Copiare gli elementi dopo la posizione desiderata
+        for (int i = 2; i < array.length; i++) {
+            newArray[i + 1] = array[i];
+        }
+
+        return newArray;
     }
 }
