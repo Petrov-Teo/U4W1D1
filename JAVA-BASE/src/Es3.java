@@ -4,6 +4,7 @@ public class Es3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
         //Chiediamo all'utente di darci il lato A
         System.out.println("inserisci il lato A");
         String latoAStringa = scanner.nextLine();
@@ -17,18 +18,19 @@ public class Es3 {
         //Stampa in Terminale il risultato
         double risultatoPerimetroRettangolo = perimetroRettangolo(latoA, latoB);
         System.out.println("Il perimetro del rettangolo è: " + risultatoPerimetroRettangolo);
-//Esercizio PARI DISPARI
+
+
+        //Esercizio PARI DISPARI
         System.out.println("Prego Inserisci un numero");
         String numueroInserito = scanner.nextLine();
         int numeroPariDispari = Integer.parseInt(numueroInserito);
-        
 
         // Verifica se il numero è pari o dispari
         String risultatoPariDispari = pariDispari(numeroPariDispari);
         System.out.println("Il numero " + numeroPariDispari + " è " + risultatoPariDispari);
 
 
-        // Chiediamo all'utente di inserire i lati del triangolo
+        // L'ARIA DI UN TRINGOLO Chiediamo all'utente di inserire i lati del triangolo
         System.out.println("Inserisci il lato A del triangolo:");
         String latoTriangoloAStringa = scanner.nextLine();
         double latoTriangoloA = Double.parseDouble(latoTriangoloAStringa);
@@ -45,6 +47,7 @@ public class Es3 {
         double perimetroTriangolo = perimetroTriangolo(latoTriangoloA, latoTriangoloB, latoTriangoloC);
         System.out.println("L'area del triangolo è: " + perimetroTriangolo);
 
+        scanner.close();
     }
 
     // Metodo per calcolare il perimetro del rettangolo
